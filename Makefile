@@ -5,8 +5,9 @@ KEYTOOL=scripts/opensslKeyTool.sh
 HOST_NAME=$(shell hostname -s)
 
 $(KEYINFO_FILE):
-	@$(KEYTOOL) -f $(KEYINFO_FILE) -g $$USER-$(HOST_NAME)-irvinecubesat
+	@$(KEYTOOL) -f $(KEYINFO_FILE) -i
 
 genKeys: 
 	$(MAKE) $(KEYINFO_FILE)
-	scripts/cubeSatNetSetupRequest.sh
+	@. $(KEYINFO_FILE); echo "Email the VPN administrator $$keyDir/$${keyName}.cert"
+
