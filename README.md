@@ -5,7 +5,7 @@ the project is distributed among the high schools and the CubeSatNet
 VPN allows students, teachers, and mentors to access the servers and
 hardware remotely in a secure manner.
 
-If you are a student from a public Irvine High School, Follow the
+If you are a Irvine CubeSat student, follow the
 instructions here to establish your digital identity for Irvine
 CubeSat and get access to the VPN and other resources.  The process
 will involve generating a public/private key pair.  Keep your private
@@ -27,5 +27,9 @@ put these files in the ~/.ssh directory.
 
 # Connecting to the vpn
 
-To connect to the vpn, run the vpnConnect.sh script.
+To connect to the vpn, run the vpnConnect.sh script.  In the cubesatnet
+project directory, type:
 
+```
+$ scripts/vpnConnect.sh
+```
